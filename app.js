@@ -64,7 +64,7 @@ const promptUser = () => {
   ]);
 };
 
-const promptProject = portfolioData => {
+const addEmployees = teamInfo => {
   console.log(`
 =================
 Enter engineer or intern details
@@ -72,8 +72,8 @@ Enter engineer or intern details
 `);
 
   // If there's no 'employees' array property, create one
-  if (!portfolioData.team) {
-    portfolioData.team = [];
+  if (!teamInfo.team) {
+    teamInfo.team = [];
   }
   return inquirer
     .prompt([
@@ -156,19 +156,19 @@ Enter engineer or intern details
       }
     ])
     .then(projectData => {
-      portfolioData.team.push(projectData);
+      teamInfo.team.push(projectData);
       if (projectData.confirmAddEmp) {
-        return promptProject(portfolioData);
+        return addEmployees(teamInfo);
       } else {
-        return portfolioData;
+        return teamInfo;
       }
     });
 };
 
 promptUser()
-  .then(promptProject)
-  .then(portfolioData => {
-    return generatePage(portfolioData);
+  .then(addEmployees)
+  .then(teamInfo => {
+    return generatePage(teamInfo);
   })
   .then(pageHTML => {
     return writeFile(pageHTML);
