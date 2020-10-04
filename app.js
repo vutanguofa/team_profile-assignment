@@ -26,8 +26,8 @@ const promptUser = () => {
       type: 'input',
       name: 'manId',
       message: 'Enter manager employee ID.',
-      validate: descriptionInput => {
-        if (descriptionInput) {
+      validate: nameInput => {
+        if (nameInput) {
           return true;
         } else {
           console.log('Enter manager employee ID!');
@@ -39,8 +39,8 @@ const promptUser = () => {
       type: 'input',
       name: 'manEmail',
       message: 'Enter manager email address.',
-      validate: descriptionInput => {
-        if (descriptionInput) {
+      validate: nameInput => {
+        if (nameInput) {
           return true;
         } else {
           console.log('Enter manager email address!');
@@ -52,8 +52,8 @@ const promptUser = () => {
       type: 'input',
       name: 'manNum',
       message: 'Enter manager office number.',
-      validate: descriptionInput => {
-        if (descriptionInput) {
+      validate: nameInput => {
+        if (nameInput) {
           return true;
         } else {
           console.log('Enter manager office number!');
@@ -100,8 +100,8 @@ Enter engineer or intern details
         type: 'input',
         name: 'empId',
         message: 'Enter employee employee ID.',
-        validate: descriptionInput => {
-          if (descriptionInput) {
+        validate: nameInput => {
+          if (nameInput) {
             return true;
           } else {
             console.log('Enter employee employee ID!');
@@ -113,8 +113,8 @@ Enter engineer or intern details
         type: 'input',
         name: 'empEmail',
         message: 'Enter employee email address.',
-        validate: descriptionInput => {
-          if (descriptionInput) {
+        validate: nameInput => {
+          if (nameInput) {
             return true;
           } else {
             console.log('Enter employee email address!');
@@ -126,8 +126,8 @@ Enter engineer or intern details
         type: 'input',
         name: 'empGit',
         message: 'Enter GitHub username.',
-        validate: descriptionInput => {
-          if (descriptionInput) {
+        validate: nameInput => {
+          if (nameInput) {
             return true;
           } else {
             console.log('Enter GitHub username!');
@@ -139,8 +139,8 @@ Enter engineer or intern details
         type: 'input',
         name: 'empSchool',
         message: 'Enter school name.',
-        validate: descriptionInput => {
-          if (descriptionInput) {
+        validate: nameInput => {
+          if (nameInput) {
             return true;
           } else {
             console.log('Enter school name!');
