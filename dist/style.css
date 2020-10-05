@@ -71,12 +71,14 @@ body {
 .managerDetails,
 .employeesSection,
 .employeesDetails {
-  border: 5px outset red;
+  border: 5px outset #000000;
   background-color: lightblue;
   text-align: left;
-  width: 300px
+  width: 300px;
 }
 
-.spanSpace{
-  padding-bottom: 10px
+div.spanSpace{
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-bottom: 10px
 }
