@@ -9,17 +9,17 @@ const generateEmployees = employeesArr => {
         return `
           <div class="employeesDetails">
             <h4>Employee Details</h4>
-            <h5>
+            <p>
               Title:
-              ${employees.map(employee => employee).join(',')}
-            </h5>
+              ${employees}
+            </p>
             <p>Name: ${empName}</p>
             <p>Employee ID: ${empId}</p>
             <p>Email: <a href="mailto:${empEmail}">${empEmail}</a></p>
             <p>School: ${empSchool}</p>
             <p><a href="https://github.com/${empGit}" target="_blank"></i>View GitHub Profile</a></p>
           </div>
-          <span class="spanSpace"></span>
+          <div class="spanSpace"></div>
         `;
       })
       .join('')}
