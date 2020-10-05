@@ -78,7 +78,7 @@ Enter engineer or intern details
   return inquirer
     .prompt([
       {
-        type: 'checkbox',
+        type: 'list',
         name: 'employees',
         message: 'Select employee title.',
         choices: ['Engineer', 'Intern']
@@ -155,9 +155,9 @@ Enter engineer or intern details
         default: false
       }
     ])
-    .then(projectData => {
-      teamInfo.team.push(projectData);
-      if (projectData.confirmAddEmp) {
+    .then(teamProfDetails => {
+      teamInfo.team.push(teamProfDetails);
+      if (teamProfDetails.confirmAddEmp) {
         return addEmployees(teamInfo);
       } else {
         return teamInfo;
